@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="BLab" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="CGame\;CGame\gamesession\;CGame\gamesession\Map\;CGame\gamesession\units\;CGame\gamesession\Script\;CGame\gamesession\teams\;CGame\gamesession\Effects\;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/BLab" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters='&quot;Slimes&quot; &quot;Trash&quot;' />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="..\..\NovaEngine\NovaEngine\lib\Debug\libNovaEngine.a" />
+					<Add directory="../../NovaEngine/NovaEngine/lib/Debug" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/BLab" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../../NovaEngine/NovaEngine/include" />
+			<Add directory="lua-5.2.1/include" />
+		</Compiler>
+		<Linker>
+			<Add library="liblua52.a" />
+			<Add directory="../../../sdk/lua-5.2.1" />
+		</Linker>
+		<Unit filename="CGame.cpp">
+			<Option virtualFolder="CGame/" />
+		</Unit>
+		<Unit filename="CGame.h">
+			<Option virtualFolder="CGame/" />
+		</Unit>
+		<Unit filename="CGameEffects.cpp">
+			<Option virtualFolder="CGame/gamesession/Effects/" />
+		</Unit>
+		<Unit filename="CGameEffects.h">
+			<Option virtualFolder="CGame/gamesession/Effects/" />
+		</Unit>
+		<Unit filename="CGameMap.cpp">
+			<Option virtualFolder="CGame/gamesession/Map/" />
+		</Unit>
+		<Unit filename="CGameMap.h">
+			<Option virtualFolder="CGame/gamesession/Map/" />
+		</Unit>
+		<Unit filename="CGameScriptEngine.cpp">
+			<Option virtualFolder="CGame/gamesession/Script/" />
+		</Unit>
+		<Unit filename="CGameScriptEngine.h">
+			<Option virtualFolder="CGame/gamesession/Script/" />
+		</Unit>
+		<Unit filename="CGameSession.cpp">
+			<Option virtualFolder="CGame/gamesession/" />
+		</Unit>
+		<Unit filename="CGameSession.h">
+			<Option virtualFolder="CGame/gamesession/" />
+		</Unit>
+		<Unit filename="CTeamsManager.cpp">
+			<Option virtualFolder="CGame/gamesession/teams/" />
+		</Unit>
+		<Unit filename="CTeamsManager.h">
+			<Option virtualFolder="CGame/gamesession/teams/" />
+		</Unit>
+		<Unit filename="CUnitsManager.cpp">
+			<Option virtualFolder="CGame/gamesession/units/" />
+		</Unit>
+		<Unit filename="CUnitsManager.h">
+			<Option virtualFolder="CGame/gamesession/units/" />
+		</Unit>
+		<Unit filename="SEffect.h">
+			<Option virtualFolder="CGame/gamesession/Effects/" />
+		</Unit>
+		<Unit filename="STeam.h">
+			<Option virtualFolder="CGame/gamesession/teams/" />
+		</Unit>
+		<Unit filename="SUnit.h">
+			<Option virtualFolder="CGame/gamesession/units/" />
+		</Unit>
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

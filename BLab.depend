@@ -1,0 +1,1401 @@
+# depslib dependency file v1.0
+1377288737 source:f:\programming\cpp\ne_project\blab\cgame.cpp
+	"CGame.h"
+	"NovaEngine.h"
+
+1375045315 
+
+1375131048 f:\programming\cpp\ne_project\blab\cgame.h
+	"NovaEngine.h"
+	<vector>
+	"CGameSession.h"
+
+1375195137 ion.h"
+
+1377288737 f:\programming\cpp\novaengine\novaengine\include\novaengine.h
+	"INovaEngine.h"
+	"IWindow.h"
+	"IRenderer.h"
+	"IEventHandler.h"
+	"ITextureManager.h"
+	"IVertexArray.h"
+	"IFileSystem.h"
+	"IFile.h"
+	"IImage.h"
+	"ITexture.h"
+	"ISceneManager.h"
+	"IGUIManager.h"
+	"IGeometryManager.h"
+	"IMaterial.h"
+	"IScene.h"
+	"ISceneNode.h"
+	"ISceneSprite.h"
+	"ISceneCamera.h"
+	"ISceneTileMap.h"
+	"IGUILayout.h"
+	"IGUINode.h"
+	"IGUIButton.h"
+	"IGUIImage.h"
+	"ERendererEnums.h"
+	"EKeycodes.h"
+	"SEngineParams.h"
+	"SEvent.h"
+	"SPixelFormat.h"
+	"STextureGenParams.h"
+	"Types.h"
+	"dimension2d_t.h"
+	"vector2d_t.h"
+	"vector3d_t.h"
+	"matrix4_t.h"
+	"color4_t.h"
+	"rect_t.h"
+	"CVertexArray.h"
+
+1374242102 ray.h"
+
+1369481540 f:\programming\cpp\novaengine\novaengine\include\inovaengine.h
+	"Types.h"
+	"Object.h"
+	"IWindow.h"
+	"IRenderer.h"
+	"ISceneManager.h"
+	"IGUIManager.h"
+	"ITextureManager.h"
+	"IGeometryManager.h"
+	"IResourceManager.h"
+	"IFileSystem.h"
+	"IEventHandler.h"
+	"SEvent.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\types.h
+	"dimension2d_t.h"
+	"vector2d_t.h"
+	"vector3d_t.h"
+	"matrix4_t.h"
+	"color4_t.h"
+	"rect_t.h"
+	<string>
+	<vector>
+
+1376146702 f:\programming\cpp\novaengine\novaengine\include\dimension2d_t.h
+
+1376134514 f:\programming\cpp\novaengine\novaengine\include\vector2d_t.h
+	"Types.h"
+	<math.h>
+	"vector3d_t.h"
+
+1373823746 t.h"
+
+1376134514 f:\programming\cpp\novaengine\novaengine\include\vector3d_t.h
+	"Types.h"
+	"vector2d_t.h"
+
+1374629826 f:\programming\cpp\novaengine\novaengine\include\matrix4_t.h
+	"Types.h"
+	"NMath.h"
+	"vector3d_t.h"
+	<stdio.h>
+	<string.h>
+	<math.h>
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\nmath.h
+	"Types.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\color4_t.h
+
+1371303946 f:\programming\cpp\novaengine\novaengine\include\rect_t.h
+	"Types.h"
+
+1377465062 f:\programming\cpp\novaengine\novaengine\include\object.h
+	<cstdio>
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\iwindow.h
+	"Object.h"
+	"Types.h"
+	"EDeviceFlags.h"
+
+1369413170 ags.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\edeviceflags.h
+
+1377288737 f:\programming\cpp\novaengine\novaengine\include\irenderer.h
+	"Object.h"
+	"Types.h"
+	"ERendererEnums.h"
+	"ITexture.h"
+	"IImage.h"
+	"IVertexArray.h"
+	"IVertexBufferObject.h"
+	"CMaterial.h"
+	"STextureGenParams.h"
+
+1375490950 uildParams.h"
+
+1376060527 f:\programming\cpp\novaengine\novaengine\include\erendererenums.h
+
+1370608690 f:\programming\cpp\novaengine\novaengine\include\itexture.h
+	"Types.h"
+	"Object.h"
+	"IImage.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\iimage.h
+	"Object.h"
+	"Types.h"
+	"SPixelFormat.h"
+
+1369413170 mat.h"
+
+1377455714 f:\programming\cpp\novaengine\novaengine\include\spixelformat.h
+	"Types.h"
+
+1376059856 f:\programming\cpp\novaengine\novaengine\include\ivertexarray.h
+	"Types.h"
+	"Object.h"
+	"SVertex.h"
+	"ERendererEnums.h"
+	"IVertexBufferObject.h"
+	"IMaterial.h"
+	"aabbox3d.h"
+
+1375193427 h"
+
+1374163208 f:\programming\cpp\novaengine\novaengine\include\svertex.h
+	"Types.h"
+
+1374244312 f:\programming\cpp\novaengine\novaengine\include\ivertexbufferobject.h
+	"Types.h"
+	"Object.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\imaterial.h
+	"Object.h"
+	"Types.h"
+	"ITexture.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\aabbox3d.h
+	"Types.h"
+
+1377463688 f:\programming\cpp\novaengine\novaengine\include\cmaterial.h
+	"Types.h"
+	"Object.h"
+	"IMaterial.h"
+
+1369413170 .h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\stexturebuildparams.h
+	"Types.h"
+
+1376147119 f:\programming\cpp\novaengine\novaengine\include\iscenemanager.h
+	"Object.h"
+	"Types.h"
+	"ITexture.h"
+	"ITileMap.h"
+
+1374676566 f:\programming\cpp\novaengine\novaengine\include\itilemap.h
+	"Types.h"
+	"Object.h"
+	"IRenderer.h"
+	"IVertexArray.h"
+
+1376058789 f:\programming\cpp\novaengine\novaengine\include\iguimanager.h
+	"Types.h"
+	"Object.h"
+	"IEventHandler.h"
+	"IVertexArray.h"
+	"IFont.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\ieventhandler.h
+	"Object.h"
+	"SEvent.h"
+
+1373564184 f:\programming\cpp\novaengine\novaengine\include\sevent.h
+
+1376313666 f:\programming\cpp\novaengine\novaengine\include\ifont.h
+	"Types.h"
+	"IRenderer.h"
+	"IImage.h"
+	"ITexture.h"
+	"IVertexArray.h"
+
+1376062462 f:\programming\cpp\novaengine\novaengine\include\itexturemanager.h
+	"Types.h"
+	"Object.h"
+	"IImage.h"
+	"ITexture.h"
+
+1376294747 f:\programming\cpp\novaengine\novaengine\include\igeometrymanager.h
+	"Object.h"
+	"Types.h"
+	"ITileMap.h"
+
+1377539297 f:\programming\cpp\novaengine\novaengine\include\iresourcemanager.h
+	"Object.h"
+	"IFont.h"
+	"IImageReader.h"
+	"IFontReader.h"
+	"IMeshReader.h"
+
+1373900065 er.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\iimagereader.h
+	"Object.h"
+	"IFile.h"
+	"IImage.h"
+
+1375600420 f:\programming\cpp\novaengine\novaengine\include\ifile.h
+	"Object.h"
+	"Types.h"
+
+1375600684 f:\programming\cpp\novaengine\novaengine\include\ifontreader.h
+	"Object.h"
+	"IFile.h"
+	"IFont.h"
+
+1375704320 f:\programming\cpp\novaengine\novaengine\include\ifilesystem.h
+	"Object.h"
+	"IFile.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\iscene.h
+	"Types.h"
+	"Object.h"
+
+1373835306 f:\programming\cpp\novaengine\novaengine\include\iscenenode.h
+	"Object.h"
+	"Types.h"
+	"ISceneManager.h"
+	"IScene.h"
+	"../src/Logger.h"
+
+1373835304 gger.h"
+
+1371054522 f:\programming\cpp\novaengine\novaengine\src\logger.h
+	<iostream>
+	<cstdarg>
+	"Types.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\iscenesprite.h
+	"Types.h"
+	"IScene2DNode.h"
+
+1369413170 ode.h"
+
+1373807006 f:\programming\cpp\novaengine\novaengine\include\iscene2dnode.h
+	"Object.h"
+	"Types.h"
+	"ISceneNode.h"
+
+1375145953 e.h"
+
+1374166662 f:\programming\cpp\novaengine\novaengine\include\iscenecamera.h
+	"ISceneNode.h"
+	"Types.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\iscenetilemap.h
+	"IScene2DNode.h"
+	"ITileMap.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\iguilayout.h
+	"Object.h"
+	"IGUIManager.h"
+
+1377468078 f:\programming\cpp\novaengine\novaengine\include\iguinode.h
+	"Types.h"
+	"Object.h"
+	"SEvent.h"
+	"IGUIManager.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\iguibutton.h
+	"IGUINode.h"
+
+1369413172 f:\programming\cpp\novaengine\novaengine\include\iguiimage.h
+	"IGUINode.h"
+	"ITexture.h"
+	"IMaterial.h"
+
+1374157372 f:\programming\cpp\novaengine\novaengine\include\ekeycodes.h
+
+1377455784 f:\programming\cpp\novaengine\novaengine\include\sengineparams.h
+	"ERendererEnums.h"
+	"IEventHandler.h"
+	"Types.h"
+
+1377554721 f:\programming\cpp\novaengine\novaengine\include\cvertexarray.h
+	"IVertexArray.h"
+
+1375131048 source:f:\programming\cpp\ne_project\blab\main.cpp
+	<iostream>
+	"CGame.h"
+
+1375195138 source:f:\programming\cpp\ne_project\blab\cgamesession.cpp
+	"CGameSession.h"
+
+1375193040 f:\programming\cpp\ne_project\blab\cgamesession.h
+	<iostream>
+	<vector>
+	<stdlib.h>
+	<time.h>
+	"NovaEngine.h"
+	"CGameScriptEngine.h"
+	"CGameMap.h"
+	"CUnitsManager.h"
+	"CTeamsManager.h"
+	"CGameEffects.h"
+
+1375195247 cts.h"
+
+1375193428 source:f:\programming\cpp\ne_project\blab\cgamemap.cpp
+	"CGameMap.h"
+
+1375045316 f:\programming\cpp\ne_project\blab\cgamemap.h
+	"NovaEngine.h"
+	<stdlib.h>
+
+1375119509 source:f:\programming\cpp\ne_project\blab\cunitcontrol.cpp
+	"CUnitControl.h"
+
+1375119509 rol.h"
+
+1375117111 f:\programming\cpp\ne_project\blab\cunitcontrol.h
+	"SUnit.h"
+	<stdlib.h>
+	<time.h>
+
+1363356262 f:\programming\sdk\lua-5.2.2\src\lua.h
+	<stdarg.h>
+	<stddef.h>
+	"luaconf.h"
+
+1375030663 "
+
+1363471818 f:\programming\sdk\lua-5.2.2\src\luaconf.h
+	<limits.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+
+1323349897 f:\programming\sdk\lua-5.2.2\src\lualib.h
+	"lua.h"
+
+1322585708 f:\programming\sdk\lua-5.2.2\src\lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1375030663 f:\programming\sdk\lua-5.2.1\include\lua.h
+	<stdarg.h>
+	<stddef.h>
+	"luaconf.h"
+
+1375030663 f:\programming\sdk\lua-5.2.1\include\luaconf.h
+	<limits.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+
+1375030663 f:\programming\sdk\lua-5.2.1\include\lualib.h
+	"lua.h"
+
+1375030663 f:\programming\sdk\lua-5.2.1\include\lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1375138644 f:\programming\cpp\ne_project\blab\sunit.h
+	"NovaEngine.h"
+
+1375033576 source:f:\programming\cpp\ne_project\blab\func_lua_binding.cpp
+	"func_lua_binding.h"
+
+1375033576 binding.h"
+
+1375033810 f:\programming\cpp\ne_project\blab\func_lua_binding.h
+	"CGameMap.h"
+	"CGameSession.h"
+	"SUnit.h"
+
+1375143498 f:\programming\cpp\ne_project\blab\cgamescriptengine.h
+	"SUnit.h"
+	"CGameMap.h"
+	"CUnitsManager.h"
+	"CTeamsManager.h"
+	"CGameEffects.h"
+	<stdlib.h>
+	<time.h>
+	<lua.h>
+	<lualib.h>
+	<lauxlib.h>
+
+1375143497 >
+
+1375193560 source:f:\programming\cpp\ne_project\blab\cgamescriptengine.cpp
+	"CGameScriptEngine.h"
+
+1375193559 ptEngine.h"
+
+1375119607 source:f:\programming\cpp\ne_project\blab\cteamscontrol.cpp
+	"CTeamsControl.h"
+
+1375119607 trol.h"
+
+1375119607 f:\programming\cpp\ne_project\blab\cteamscontrol.h
+
+1375120010 f:\programming\cpp\ne_project\blab\cunitsmanager.h
+	"SUnit.h"
+	<stdlib.h>
+	<time.h>
+
+1375140792 source:f:\programming\cpp\ne_project\blab\cunitsmanager.cpp
+	"CUnitsManager.h"
+
+1375140790 ager.h"
+
+1375132558 source:f:\programming\cpp\ne_project\blab\cteamsmanager.cpp
+	"CTeamsManager.h"
+
+1375125978 f:\programming\cpp\ne_project\blab\cteamsmanager.h
+	"NovaEngine.h"
+	"STeam.h"
+	<stdlib.h>
+	<vector>
+
+1375126040 f:\programming\cpp\ne_project\blab\steam.h
+	"NovaEngine.h"
+	<string>
+	"SUnit.h"
+
+1375195248 source:f:\programming\cpp\ne_project\blab\cgameeffects.cpp
+	"CGameEffects.h"
+
+1375195148 f:\programming\cpp\ne_project\blab\cgameeffects.h
+	"NovaEngine.h"
+	<vector>
+	<stdlib.h>
+	<time.h>
+	"SEffect.h"
+
+1375145954 f:\programming\cpp\ne_project\blab\seffect.h
+	"NovaEngine.h"
+
+1375787018 source:e:\programming\cpp\ne_project\blab\cgame.cpp
+	"CGame.h"
+
+1375131047 e:\programming\cpp\ne_project\blab\cgame.h
+	"NovaEngine.h"
+	<vector>
+	"CGameSession.h"
+
+1374187360 e:\programming\cpp\novaengine\novaengine\include\novaengine.h
+	"INovaEngine.h"
+	"IWindow.h"
+	"IRenderer.h"
+	"IEventHandler.h"
+	"ITextureManager.h"
+	"IVertexArray.h"
+	"IFileSystem.h"
+	"IFile.h"
+	"IImage.h"
+	"ITexture.h"
+	"ISceneManager.h"
+	"IGUIManager.h"
+	"IGeometryManager.h"
+	"IMaterial.h"
+	"IScene.h"
+	"ISceneNode.h"
+	"ISceneSprite.h"
+	"ISceneCamera.h"
+	"ISceneTileMap.h"
+	"IGUILayout.h"
+	"IGUINode.h"
+	"IGUIButton.h"
+	"IGUIImage.h"
+	"ERendererEnums.h"
+	"EKeycodes.h"
+	"SEngineParams.h"
+	"SEvent.h"
+	"SPixelFormat.h"
+	"STextureBuildParams.h"
+	"Types.h"
+	"dimension2d_t.h"
+	"vector2d_t.h"
+	"vector3d_t.h"
+	"matrix4_t.h"
+	"color4_t.h"
+	"rect_t.h"
+	"CVertexArray.h"
+
+1369481539 e:\programming\cpp\novaengine\novaengine\include\inovaengine.h
+	"Types.h"
+	"Object.h"
+	"IWindow.h"
+	"IRenderer.h"
+	"ISceneManager.h"
+	"IGUIManager.h"
+	"ITextureManager.h"
+	"IGeometryManager.h"
+	"IResourceManager.h"
+	"IFileSystem.h"
+	"IEventHandler.h"
+	"SEvent.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\types.h
+	"dimension2d_t.h"
+	"vector2d_t.h"
+	"vector3d_t.h"
+	"matrix4_t.h"
+	"color4_t.h"
+	"rect_t.h"
+	<string>
+	<vector>
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\dimension2d_t.h
+
+1373823664 e:\programming\cpp\novaengine\novaengine\include\vector2d_t.h
+	"Types.h"
+	<math.h>
+	"vector3d_t.h"
+
+1373823746 e:\programming\cpp\novaengine\novaengine\include\vector3d_t.h
+	"Types.h"
+	"vector2d_t.h"
+
+1374629824 e:\programming\cpp\novaengine\novaengine\include\matrix4_t.h
+	"Types.h"
+	"NMath.h"
+	"vector3d_t.h"
+	<stdio.h>
+	<string.h>
+	<math.h>
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\nmath.h
+	"Types.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\color4_t.h
+
+1371303945 e:\programming\cpp\novaengine\novaengine\include\rect_t.h
+	"Types.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\object.h
+	<cstdio>
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\iwindow.h
+	"Object.h"
+	"Types.h"
+	"EDeviceFlags.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\edeviceflags.h
+
+1375490950 e:\programming\cpp\novaengine\novaengine\include\irenderer.h
+	"Object.h"
+	"Types.h"
+	"ERendererEnums.h"
+	"ITexture.h"
+	"IImage.h"
+	"IVertexArray.h"
+	"IVertexBufferObject.h"
+	"CMaterial.h"
+	"STextureBuildParams.h"
+
+1375490950 e:\programming\cpp\novaengine\novaengine\include\erendererenums.h
+
+1370608688 e:\programming\cpp\novaengine\novaengine\include\itexture.h
+	"Types.h"
+	"Object.h"
+	"IImage.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\iimage.h
+	"Object.h"
+	"Types.h"
+	"SPixelFormat.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\spixelformat.h
+	"Types.h"
+
+1374593311 e:\programming\cpp\novaengine\novaengine\include\ivertexarray.h
+	"Types.h"
+	"Object.h"
+	"SVertex.h"
+	"ERendererEnums.h"
+	"IVertexBufferObject.h"
+	"IMaterial.h"
+	"aabbox3d.h"
+
+1374163207 e:\programming\cpp\novaengine\novaengine\include\svertex.h
+	"Types.h"
+
+1374244311 e:\programming\cpp\novaengine\novaengine\include\ivertexbufferobject.h
+	"Types.h"
+	"Object.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\imaterial.h
+	"Object.h"
+	"Types.h"
+	"ITexture.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\aabbox3d.h
+	"Types.h"
+
+1374159391 e:\programming\cpp\novaengine\novaengine\include\cmaterial.h
+	"Types.h"
+	"Object.h"
+	"IMaterial.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\stexturebuildparams.h
+	"Types.h"
+
+1371043319 e:\programming\cpp\novaengine\novaengine\include\iscenemanager.h
+	"Object.h"
+	"Types.h"
+	"ITexture.h"
+	"ITileMap.h"
+
+1374676565 e:\programming\cpp\novaengine\novaengine\include\itilemap.h
+	"Types.h"
+	"Object.h"
+	"IRenderer.h"
+	"IVertexArray.h"
+
+1374187360 e:\programming\cpp\novaengine\novaengine\include\iguimanager.h
+	"Types.h"
+	"Object.h"
+	"IEventHandler.h"
+	"IVertexArray.h"
+	"IFont.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\ieventhandler.h
+	"Object.h"
+	"SEvent.h"
+
+1373564182 e:\programming\cpp\novaengine\novaengine\include\sevent.h
+
+1375713514 e:\programming\cpp\novaengine\novaengine\include\ifont.h
+	"Types.h"
+	"IRenderer.h"
+	"IImage.h"
+	"ITexture.h"
+	"IVertexArray.h"
+
+1370771868 e:\programming\cpp\novaengine\novaengine\include\itexturemanager.h
+	"Types.h"
+	"Object.h"
+	"IImage.h"
+	"ITexture.h"
+
+1374187360 e:\programming\cpp\novaengine\novaengine\include\igeometrymanager.h
+	"Object.h"
+	"Types.h"
+	"ITileMap.h"
+
+1370711565 e:\programming\cpp\novaengine\novaengine\include\iresourcemanager.h
+	"Object.h"
+	"IFont.h"
+	"IImageReader.h"
+	"IFontReader.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\iimagereader.h
+	"Object.h"
+	"IFile.h"
+	"IImage.h"
+
+1375600418 e:\programming\cpp\novaengine\novaengine\include\ifile.h
+	"Object.h"
+	"Types.h"
+
+1375600683 e:\programming\cpp\novaengine\novaengine\include\ifontreader.h
+	"Object.h"
+	"IFile.h"
+	"IFont.h"
+
+1375704319 e:\programming\cpp\novaengine\novaengine\include\ifilesystem.h
+	"Object.h"
+	"IFile.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\iscene.h
+	"Types.h"
+	"Object.h"
+
+1373835304 e:\programming\cpp\novaengine\novaengine\include\iscenenode.h
+	"Object.h"
+	"Types.h"
+	"ISceneManager.h"
+	"IScene.h"
+	"../src/Logger.h"
+
+1371054520 e:\programming\cpp\novaengine\novaengine\src\logger.h
+	<iostream>
+	<cstdarg>
+	"Types.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\iscenesprite.h
+	"Types.h"
+	"IScene2DNode.h"
+
+1373807005 e:\programming\cpp\novaengine\novaengine\include\iscene2dnode.h
+	"Object.h"
+	"Types.h"
+	"ISceneNode.h"
+
+1374166661 e:\programming\cpp\novaengine\novaengine\include\iscenecamera.h
+	"ISceneNode.h"
+	"Types.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\iscenetilemap.h
+	"IScene2DNode.h"
+	"ITileMap.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\iguilayout.h
+	"Object.h"
+	"IGUIManager.h"
+
+1373900065 e:\programming\cpp\novaengine\novaengine\include\iguinode.h
+	"Types.h"
+	"Object.h"
+	"SEvent.h"
+	"IGUIManager.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\iguibutton.h
+	"IGUINode.h"
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\iguiimage.h
+	"IGUINode.h"
+	"ITexture.h"
+	"IMaterial.h"
+
+1374157371 e:\programming\cpp\novaengine\novaengine\include\ekeycodes.h
+
+1369413170 e:\programming\cpp\novaengine\novaengine\include\sengineparams.h
+	"ERendererEnums.h"
+	"IEventHandler.h"
+	"Types.h"
+
+1374242102 e:\programming\cpp\novaengine\novaengine\include\cvertexarray.h
+	"IVertexArray.h"
+
+1375193038 e:\programming\cpp\ne_project\blab\cgamesession.h
+	<iostream>
+	<vector>
+	<stdlib.h>
+	<time.h>
+	"NovaEngine.h"
+	"CGameScriptEngine.h"
+	"CGameMap.h"
+	"CUnitsManager.h"
+	"CTeamsManager.h"
+	"CGameEffects.h"
+
+1375143497 e:\programming\cpp\ne_project\blab\cgamescriptengine.h
+	"SUnit.h"
+	"CGameMap.h"
+	"CUnitsManager.h"
+	"CTeamsManager.h"
+	"CGameEffects.h"
+	<stdlib.h>
+	<time.h>
+	<lua.h>
+	<lualib.h>
+	<lauxlib.h>
+
+1375138643 e:\programming\cpp\ne_project\blab\sunit.h
+	"NovaEngine.h"
+
+1375045315 e:\programming\cpp\ne_project\blab\cgamemap.h
+	"NovaEngine.h"
+	<stdlib.h>
+
+1375120009 e:\programming\cpp\ne_project\blab\cunitsmanager.h
+	"SUnit.h"
+	<stdlib.h>
+	<time.h>
+
+1375125976 e:\programming\cpp\ne_project\blab\cteamsmanager.h
+	"NovaEngine.h"
+	"STeam.h"
+	<stdlib.h>
+	<vector>
+
+1375126038 e:\programming\cpp\ne_project\blab\steam.h
+	"NovaEngine.h"
+	<string>
+	"SUnit.h"
+
+1375195147 e:\programming\cpp\ne_project\blab\cgameeffects.h
+	"NovaEngine.h"
+	<vector>
+	<stdlib.h>
+	<time.h>
+	"SEffect.h"
+
+1375145953 e:\programming\cpp\ne_project\blab\seffect.h
+	"NovaEngine.h"
+
+1375030663 e:\programming\sdk\lua-5.2.1\include\lua.h
+	<stdarg.h>
+	<stddef.h>
+	"luaconf.h"
+
+1375030663 e:\programming\sdk\lua-5.2.1\include\luaconf.h
+	<limits.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+
+1375030663 e:\programming\sdk\lua-5.2.1\include\lualib.h
+	"lua.h"
+
+1375030663 e:\programming\sdk\lua-5.2.1\include\lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1375193427 source:e:\programming\cpp\ne_project\blab\cgamemap.cpp
+	"CGameMap.h"
+
+1375193559 source:e:\programming\cpp\ne_project\blab\cgamescriptengine.cpp
+	"CGameScriptEngine.h"
+
+1375131047 source:e:\programming\cpp\ne_project\blab\main.cpp
+	<iostream>
+	"CGame.h"
+
+1375195137 source:e:\programming\cpp\ne_project\blab\cgamesession.cpp
+	"CGameSession.h"
+
+1375132557 source:e:\programming\cpp\ne_project\blab\cteamsmanager.cpp
+	"CTeamsManager.h"
+
+1375140790 source:e:\programming\cpp\ne_project\blab\cunitsmanager.cpp
+	"CUnitsManager.h"
+
+1375195247 source:e:\programming\cpp\ne_project\blab\cgameeffects.cpp
+	"CGameEffects.h"
+
+1375972048 source:/home/angryhumster/programming/cpp/NE_Project/BLab/CGame.cpp
+	"CGame.h"
+	"NovaEngine.h"
+
+1375131048 /home/angryhumster/programming/cpp/NE_Project/BLab/CGame.h
+	"NovaEngine.h"
+	<vector>
+	"CGameSession.h"
+
+1374187362 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/NovaEngine.h
+	"INovaEngine.h"
+	"IWindow.h"
+	"IRenderer.h"
+	"IEventHandler.h"
+	"ITextureManager.h"
+	"IVertexArray.h"
+	"IFileSystem.h"
+	"IFile.h"
+	"IImage.h"
+	"ITexture.h"
+	"ISceneManager.h"
+	"IGUIManager.h"
+	"IGeometryManager.h"
+	"IMaterial.h"
+	"IScene.h"
+	"ISceneNode.h"
+	"ISceneSprite.h"
+	"ISceneCamera.h"
+	"ISceneTileMap.h"
+	"IGUILayout.h"
+	"IGUINode.h"
+	"IGUIButton.h"
+	"IGUIImage.h"
+	"ERendererEnums.h"
+	"EKeycodes.h"
+	"SEngineParams.h"
+	"SEvent.h"
+	"SPixelFormat.h"
+	"STextureBuildParams.h"
+	"Types.h"
+	"dimension2d_t.h"
+	"vector2d_t.h"
+	"vector3d_t.h"
+	"matrix4_t.h"
+	"color4_t.h"
+	"rect_t.h"
+	"CVertexArray.h"
+
+1369481540 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/INovaEngine.h
+	"Types.h"
+	"Object.h"
+	"IWindow.h"
+	"IRenderer.h"
+	"ISceneManager.h"
+	"IGUIManager.h"
+	"ITextureManager.h"
+	"IGeometryManager.h"
+	"IResourceManager.h"
+	"IFileSystem.h"
+	"IEventHandler.h"
+	"SEvent.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/Types.h
+	"dimension2d_t.h"
+	"vector2d_t.h"
+	"vector3d_t.h"
+	"matrix4_t.h"
+	"color4_t.h"
+	"rect_t.h"
+	<string>
+	<vector>
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/dimension2d_t.h
+
+1373823666 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/vector2d_t.h
+	"Types.h"
+	<math.h>
+	"vector3d_t.h"
+
+1373823748 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/vector3d_t.h
+	"Types.h"
+	"vector2d_t.h"
+
+1374629826 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/matrix4_t.h
+	"Types.h"
+	"NMath.h"
+	"vector3d_t.h"
+	<stdio.h>
+	<string.h>
+	<math.h>
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/NMath.h
+	"Types.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/color4_t.h
+
+1371303946 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/rect_t.h
+	"Types.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/Object.h
+	<cstdio>
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IWindow.h
+	"Object.h"
+	"Types.h"
+	"EDeviceFlags.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/EDeviceFlags.h
+
+1375490952 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IRenderer.h
+	"Object.h"
+	"Types.h"
+	"ERendererEnums.h"
+	"ITexture.h"
+	"IImage.h"
+	"IVertexArray.h"
+	"IVertexBufferObject.h"
+	"CMaterial.h"
+	"STextureBuildParams.h"
+
+1375490952 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/ERendererEnums.h
+
+1370608690 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/ITexture.h
+	"Types.h"
+	"Object.h"
+	"IImage.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IImage.h
+	"Object.h"
+	"Types.h"
+	"SPixelFormat.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/SPixelFormat.h
+	"Types.h"
+
+1375794274 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IVertexArray.h
+	"Types.h"
+	"Object.h"
+	"SVertex.h"
+	"ERendererEnums.h"
+	"IVertexBufferObject.h"
+	"IMaterial.h"
+	"aabbox3d.h"
+
+1374163208 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/SVertex.h
+	"Types.h"
+
+1374244312 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IVertexBufferObject.h
+	"Types.h"
+	"Object.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IMaterial.h
+	"Object.h"
+	"Types.h"
+	"ITexture.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/aabbox3d.h
+	"Types.h"
+
+1374159392 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/CMaterial.h
+	"Types.h"
+	"Object.h"
+	"IMaterial.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/STextureBuildParams.h
+	"Types.h"
+
+1371043320 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/ISceneManager.h
+	"Object.h"
+	"Types.h"
+	"ITexture.h"
+	"ITileMap.h"
+
+1374676566 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/ITileMap.h
+	"Types.h"
+	"Object.h"
+	"IRenderer.h"
+	"IVertexArray.h"
+
+1375791896 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IGUIManager.h
+	"Types.h"
+	"Object.h"
+	"IEventHandler.h"
+	"IVertexArray.h"
+	"IFont.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IEventHandler.h
+	"Object.h"
+	"SEvent.h"
+
+1373564184 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/SEvent.h
+
+1375792054 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IFont.h
+	"Types.h"
+	"IRenderer.h"
+	"IImage.h"
+	"ITexture.h"
+	"IVertexArray.h"
+
+1370771870 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/ITextureManager.h
+	"Types.h"
+	"Object.h"
+	"IImage.h"
+	"ITexture.h"
+
+1374187362 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IGeometryManager.h
+	"Object.h"
+	"Types.h"
+	"ITileMap.h"
+
+1370711566 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IResourceManager.h
+	"Object.h"
+	"IFont.h"
+	"IImageReader.h"
+	"IFontReader.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IImageReader.h
+	"Object.h"
+	"IFile.h"
+	"IImage.h"
+
+1375600420 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IFile.h
+	"Object.h"
+	"Types.h"
+
+1375600684 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IFontReader.h
+	"Object.h"
+	"IFile.h"
+	"IFont.h"
+
+1375704320 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IFileSystem.h
+	"Object.h"
+	"IFile.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IScene.h
+	"Types.h"
+	"Object.h"
+
+1373835306 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/ISceneNode.h
+	"Object.h"
+	"Types.h"
+	"ISceneManager.h"
+	"IScene.h"
+	"../src/Logger.h"
+
+1371054522 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/src/Logger.h
+	<iostream>
+	<cstdarg>
+	"Types.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/ISceneSprite.h
+	"Types.h"
+	"IScene2DNode.h"
+
+1373807006 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IScene2DNode.h
+	"Object.h"
+	"Types.h"
+	"ISceneNode.h"
+
+1374166662 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/ISceneCamera.h
+	"ISceneNode.h"
+	"Types.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/ISceneTileMap.h
+	"IScene2DNode.h"
+	"ITileMap.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IGUILayout.h
+	"Object.h"
+	"IGUIManager.h"
+
+1373900066 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IGUINode.h
+	"Types.h"
+	"Object.h"
+	"SEvent.h"
+	"IGUIManager.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IGUIButton.h
+	"IGUINode.h"
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/IGUIImage.h
+	"IGUINode.h"
+	"ITexture.h"
+	"IMaterial.h"
+
+1374157372 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/EKeycodes.h
+
+1369413172 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/SEngineParams.h
+	"ERendererEnums.h"
+	"IEventHandler.h"
+	"Types.h"
+
+1375794302 /home/angryhumster/programming/cpp/NovaEngine/NovaEngine/include/CVertexArray.h
+	"IVertexArray.h"
+
+1375193040 /home/angryhumster/programming/cpp/NE_Project/BLab/CGameSession.h
+	<iostream>
+	<vector>
+	<stdlib.h>
+	<time.h>
+	"NovaEngine.h"
+	"CGameScriptEngine.h"
+	"CGameMap.h"
+	"CUnitsManager.h"
+	"CTeamsManager.h"
+	"CGameEffects.h"
+
+1375143498 /home/angryhumster/programming/cpp/NE_Project/BLab/CGameScriptEngine.h
+	"SUnit.h"
+	"CGameMap.h"
+	"CUnitsManager.h"
+	"CTeamsManager.h"
+	"CGameEffects.h"
+	<stdlib.h>
+	<time.h>
+	<lua.h>
+	<lualib.h>
+	<lauxlib.h>
+
+1375138644 /home/angryhumster/programming/cpp/NE_Project/BLab/SUnit.h
+	"NovaEngine.h"
+
+1375045316 /home/angryhumster/programming/cpp/NE_Project/BLab/CGameMap.h
+	"NovaEngine.h"
+	<stdlib.h>
+
+1375120010 /home/angryhumster/programming/cpp/NE_Project/BLab/CUnitsManager.h
+	"SUnit.h"
+	<stdlib.h>
+	<time.h>
+
+1375125978 /home/angryhumster/programming/cpp/NE_Project/BLab/CTeamsManager.h
+	"NovaEngine.h"
+	"STeam.h"
+	<stdlib.h>
+	<vector>
+
+1375126040 /home/angryhumster/programming/cpp/NE_Project/BLab/STeam.h
+	"NovaEngine.h"
+	<string>
+	"SUnit.h"
+
+1375195148 /home/angryhumster/programming/cpp/NE_Project/BLab/CGameEffects.h
+	"NovaEngine.h"
+	<vector>
+	<stdlib.h>
+	<time.h>
+	"SEffect.h"
+
+1375145954 /home/angryhumster/programming/cpp/NE_Project/BLab/SEffect.h
+	"NovaEngine.h"
+
+1375030664 /home/angryhumster/programming/sdk/lua-5.2.1/include/lua.h
+	<stdarg.h>
+	<stddef.h>
+	"luaconf.h"
+
+1375030664 /home/angryhumster/programming/sdk/lua-5.2.1/include/luaconf.h
+	<limits.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+
+1375030664 /home/angryhumster/programming/sdk/lua-5.2.1/include/lualib.h
+	"lua.h"
+
+1375030664 /home/angryhumster/programming/sdk/lua-5.2.1/include/lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1375195248 source:/home/angryhumster/programming/cpp/NE_Project/BLab/CGameEffects.cpp
+	"CGameEffects.h"
+
+1375193428 source:/home/angryhumster/programming/cpp/NE_Project/BLab/CGameMap.cpp
+	"CGameMap.h"
+
+1375193560 source:/home/angryhumster/programming/cpp/NE_Project/BLab/CGameScriptEngine.cpp
+	"CGameScriptEngine.h"
+
+1375195138 source:/home/angryhumster/programming/cpp/NE_Project/BLab/CGameSession.cpp
+	"CGameSession.h"
+
+1375132558 source:/home/angryhumster/programming/cpp/NE_Project/BLab/CTeamsManager.cpp
+	"CTeamsManager.h"
+
+1375140792 source:/home/angryhumster/programming/cpp/NE_Project/BLab/CUnitsManager.cpp
+	"CUnitsManager.h"
+
+1375131048 source:/home/angryhumster/programming/cpp/NE_Project/BLab/main.cpp
+	<iostream>
+	"CGame.h"
+
+1363352662 /home/angryhumster/lua-5.2.2/src/lua.h
+	<stdarg.h>
+	<stddef.h>
+	"luaconf.h"
+
+1363468218 /home/angryhumster/lua-5.2.2/src/luaconf.h
+	<limits.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+
+1323346297 /home/angryhumster/lua-5.2.2/src/lualib.h
+	"lua.h"
+
+1322582108 /home/angryhumster/lua-5.2.2/src/lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1377288737 f:\programming\cpp\novaengine\novaengine\include\stexturegenparams.h
+	"Types.h"
+
+1377540541 f:\programming\cpp\novaengine\novaengine\include\imeshreader.h
+	"Object.h"
+	"IFile.h"
+	"IMesh.h"
+
+1377535602 f:\programming\cpp\novaengine\novaengine\include\imesh.h
+	"Object.h"
+	"IVertexArray.h"
+	"IMaterial.h"
+
+1377288737 source:f:\programming\cpp\project\biolab\src\cgame.cpp
+	"CGame.h"
+	"NovaEngine.h"
+
+1375131048 f:\programming\cpp\project\biolab\src\cgame.h
+	"NovaEngine.h"
+	<vector>
+	"CGameSession.h"
+
+1375193040 f:\programming\cpp\project\biolab\src\cgamesession.h
+	<iostream>
+	<vector>
+	<stdlib.h>
+	<time.h>
+	"NovaEngine.h"
+	"CGameScriptEngine.h"
+	"CGameMap.h"
+	"CUnitsManager.h"
+	"CTeamsManager.h"
+	"CGameEffects.h"
+
+1375143498 f:\programming\cpp\project\biolab\src\cgamescriptengine.h
+	"SUnit.h"
+	"CGameMap.h"
+	"CUnitsManager.h"
+	"CTeamsManager.h"
+	"CGameEffects.h"
+	<stdlib.h>
+	<time.h>
+	<lua.h>
+	<lualib.h>
+	<lauxlib.h>
+
+1375138644 f:\programming\cpp\project\biolab\src\sunit.h
+	"NovaEngine.h"
+
+1375045316 f:\programming\cpp\project\biolab\src\cgamemap.h
+	"NovaEngine.h"
+	<stdlib.h>
+
+1375120010 f:\programming\cpp\project\biolab\src\cunitsmanager.h
+	"SUnit.h"
+	<stdlib.h>
+	<time.h>
+
+1375125978 f:\programming\cpp\project\biolab\src\cteamsmanager.h
+	"NovaEngine.h"
+	"STeam.h"
+	<stdlib.h>
+	<vector>
+
+1375126040 f:\programming\cpp\project\biolab\src\steam.h
+	"NovaEngine.h"
+	<string>
+	"SUnit.h"
+
+1375195148 f:\programming\cpp\project\biolab\src\cgameeffects.h
+	"NovaEngine.h"
+	<vector>
+	<stdlib.h>
+	<time.h>
+	"SEffect.h"
+
+1375145954 f:\programming\cpp\project\biolab\src\seffect.h
+	"NovaEngine.h"
+
+1375030663 f:\programming\cpp\project\biolab\lua-5.2.1\include\lua.h
+	<stdarg.h>
+	<stddef.h>
+	"luaconf.h"
+
+1375030663 f:\programming\cpp\project\biolab\lua-5.2.1\include\luaconf.h
+	<limits.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+
+1375030663 f:\programming\cpp\project\biolab\lua-5.2.1\include\lualib.h
+	"lua.h"
+
+1375030663 f:\programming\cpp\project\biolab\lua-5.2.1\include\lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1375195248 source:f:\programming\cpp\project\biolab\src\cgameeffects.cpp
+	"CGameEffects.h"
+
+1375193428 source:f:\programming\cpp\project\biolab\src\cgamemap.cpp
+	"CGameMap.h"
+
+1375193560 source:f:\programming\cpp\project\biolab\src\cgamescriptengine.cpp
+	"CGameScriptEngine.h"
+
+1377630078 source:f:\programming\cpp\project\biolab\src\cgamesession.cpp
+	"CGameSession.h"
+
+1375132558 source:f:\programming\cpp\project\biolab\src\cteamsmanager.cpp
+	"CTeamsManager.h"
+
+1375140792 source:f:\programming\cpp\project\biolab\src\cunitsmanager.cpp
+	"CUnitsManager.h"
+
+1375131048 source:f:\programming\cpp\project\biolab\src\main.cpp
+	<iostream>
+	"CGame.h"
+
