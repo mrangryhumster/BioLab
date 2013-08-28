@@ -22,6 +22,7 @@ CGameSession::~CGameSession()
 
 bool CGameSession::init()
 {
+    Engine->registerEventHandler(this);
     //Load map
     GameMap     = new CGameMap(Engine,core::dimension2du(16,16));
 
@@ -48,7 +49,7 @@ bool  CGameSession::add_player(const char* player_name)
 {
     return TeamsManager->load_team(player_name);
 }
-bool CGameSession::start()
+bool CGameSession::start(u32 UnitsCount)
 {
     //------------------------------------------------
     u32 size = TeamsManager->getTeamsCount();
@@ -63,12 +64,41 @@ bool CGameSession::start()
         SpawnGlobPos.y = -(((int)GameMap->get_map_size().height*16)) + unit.Position.y * 32 + 16;
         GameEffects->create_effect(GE_SPAWN,SpawnGlobPos);
 
-        for(u32 i = 0; i < 16; i++)
+        for(u32 i = 0; i < UnitsCount; i++)
             UnitsManager->addUnit(unit);
 
     }
     UnitsManager->shake_units();
     //---------------------------------------------------
+}
+bool CGameSession::OnEvent(SEvent event)
+{
+    if(event.event_type == EET_MOUSE)
+    {
+        if(event.mouse.event_type == EETM_BUTTON)
+        {
+            camera_moving = event.mouse.key_state;
+
+            last_mouse_pos.x = event.mouse.x;
+            last_mouse_pos.y = event.mouse.y;
+
+        }
+        else
+        {
+            if(camera_moving)
+            {
+                curr_mouse_pos.x = event.mouse.x;
+                curr_mouse_pos.y = event.mouse.y;
+
+                camera_pos.x += last_mouse_pos.x - curr_mouse_pos.x;
+                camera_pos.y += curr_mouse_pos.y - last_mouse_pos.y;
+
+                last_mouse_pos = curr_mouse_pos;
+
+                Engine->getSceneManager()->getActiveScene()->getActiveCamera()->setPosition(camera_pos);
+            }
+        }
+    }
 }
 bool CGameSession::update(f32 ms)
 {
@@ -129,6 +159,7 @@ bool CGameSession::render_units()
         {
             scene::ISceneSprite* sprite = team->TeamSprite;
             sprite->setPosition(LastPosition);
+            sprite->getMaterial()->setMaterialColor(core::color4u(255,255,255,255));
             sprite->render();
         }
     }

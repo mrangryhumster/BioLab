@@ -14,8 +14,8 @@ CGameMap::CGameMap(INovaEngine* p_engine,core::dimension2du p_map_size):
     Lay_2 = Engine->getSceneManager()->createSceneTileMap(TileMap_2);
     Lay_2->RegisterNode();
 
-    //Lay_1->getMaterial()->setMaterialWireframe(true);
-    //Lay_2->getMaterial()->setMaterialWireframe(true);
+    Lay_1->getMaterial()->setMaterialWireframe(true);
+    Lay_2->getMaterial()->setMaterialWireframe(true);
 
     renderer::STile tile1,tile2;
     tile1.Tile_Color = core::color4u(128,128,128,255);

@@ -27,6 +27,7 @@ class CGame
     INovaEngine* Engine;
     CGameSession* Session;
     std::vector<f32> fps_list;
+    u32 UnitsCount;
 };
 
 #endif // CGAME_H

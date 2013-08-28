@@ -44,20 +44,22 @@ bool CGame::init_game()
 {
 
     Session = new CGameSession(Engine,2500,false);
-
+    UnitsCount = 10;
     if(Session->init() == false)
         return false;
 
-    for(int i = 1; i < argc;i++)
+    for(int i = 1; i < argc;i+=2)
     {
-        Session->add_player(argv[i]);
+        if(strcmp(argv[i],"-np") == 0)
+            Session->add_player(argv[i+1]);
+        if(strcmp(argv[i],"-uc") == 0)
+            UnitsCount = atoi(argv[i+1]);
     }
     return true;
 }
 bool CGame::run()
 {
-
-    Session->start();
+    Session->start(UnitsCount);
     f32 fps = 0;
     fps_list.push_back(0);
     while(Engine->run())

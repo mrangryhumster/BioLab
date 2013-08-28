@@ -5,6 +5,11 @@
 CGameScriptEngine* lb_ScriptEngine = NULL;
 //!***************************************************************************
 //! Utils
+
+void fix_pos(s32 PosSize,s32& x,s32& y)
+{
+
+}
 void pos_to_1(s32& x,s32& y)
 {
     if(x != 0)

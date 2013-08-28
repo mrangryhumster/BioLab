@@ -19,7 +19,7 @@ using namespace novaengine;
 
 
 
-class CGameSession
+class CGameSession : public IEventHandler
 {
 public:
     CGameSession(INovaEngine* p_engine,u32 p_simspeed,bool p_execute_all);
@@ -27,8 +27,9 @@ public:
 
     bool init();
     bool add_player(const char* player_name);
-    bool start();
+    bool start(u32 UnitsCount);
 
+    bool OnEvent(SEvent event);
     bool update(f32 ms);
     bool render_units();
 
@@ -38,6 +39,14 @@ protected:
 private:
 
     INovaEngine*    Engine;
+
+    //--------------------------
+    bool            camera_moving;
+    f32             camera_zoom;
+    core::vector3df camera_pos;
+    core::vector2ds last_mouse_pos;
+    core::vector2ds curr_mouse_pos;
+    //--------------------------
 
     bool inited;
     CGameMap*          GameMap;

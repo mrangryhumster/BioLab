@@ -13,6 +13,7 @@ struct STeam
     std::string TeamScript;
 
     SUnit sample_unit;
+    u32   UnitsCount;
 
     s32 TeamID;
 };
