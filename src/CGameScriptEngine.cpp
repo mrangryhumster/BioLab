@@ -3,48 +3,40 @@
 
 
 CGameScriptEngine* lb_ScriptEngine = NULL;
+unsigned int LinesProcessed = 0;
 //!***************************************************************************
 //! Utils
 
-void fix_pos(s32 PosSize,s32& x,s32& y)
+void align_pos(s32 pos_align,s32& x,s32& y)
 {
-
-}
-void pos_to_1(s32& x,s32& y)
-{
-    if(x != 0)
-        x = x / abs(x);
-    if(y != 0)
-        y = y / abs(y);
-}
-
-void pos_to_2(s32& x,s32& y)
-{
-    if(x > 2)
-        x =  2;
-    if(x < -2)
-        x = -2;
-    if(y > 2)
-        y =  2;
-    if(y < -2)
-        y = -2;
+    if(pos_align == 1)
+    {
+        if(x != 0)
+            x = x / abs(x);
+        if(y != 0)
+            y = y / abs(y);
+    }
+    else
+    {
+        if(x > 2)
+            x =  2;
+        if(x < -2)
+            x = -2;
+        if(y > 2)
+            y =  2;
+        if(y < -2)
+            y = -2;
+    }
 }
 
-void absolute_pos_to_1(s32& x,s32& y)
+void relative_to_absolute(s32& x,s32& y)
 {
-    pos_to_1(x,y);
     x+= lb_ScriptEngine->getCurrentUnit()->Position.x;
     y+= lb_ScriptEngine->getCurrentUnit()->Position.y;
 }
 
-void absolute_pos_to_2(s32& x,s32& y)
-{
-    pos_to_2(x,y);
-    x+= lb_ScriptEngine->getCurrentUnit()->Position.x;
-    y+= lb_ScriptEngine->getCurrentUnit()->Position.y;
-}
 
-void relative_to_global_pos(s32& x,s32& y,SUnit* unit)
+void get_global_pos(s32& x,s32& y,SUnit* unit)
 {
     x = -(((int)lb_ScriptEngine->getGameMap()->get_map_size().width *16)) + unit->Position.x * 32 + 16;
     y = -(((int)lb_ScriptEngine->getGameMap()->get_map_size().height*16)) + unit->Position.y * 32 + 16;
@@ -52,8 +44,15 @@ void relative_to_global_pos(s32& x,s32& y,SUnit* unit)
 //!***************************************************************************
 //!************************LUA*BINDING*FUNCTIONS******************************
 //!***************************************************************************
-
-
+void lua_hook_call(lua_State *Lua, lua_Debug *ar)
+{
+    LinesProcessed++;
+    if(LinesProcessed >= 20480)
+       {
+           lua_pushstring(Lua,"Over call! =(");
+           lua_error(Lua);
+       }
+}
 int lua_getRandom(lua_State* Lua)
 {
     int start = 0;
@@ -102,7 +101,8 @@ int lua_isPassably(lua_State* Lua)
     int     x       = lua_tonumber(Lua,1);
     int     y       = lua_tonumber(Lua,2);
 
-    absolute_pos_to_2(x,y);
+    align_pos(2,x,y);
+    relative_to_absolute(x,y);
 
     if(lb_ScriptEngine->isCollision(x,y))
         lua_pushboolean(Lua,1);
@@ -114,6 +114,7 @@ int lua_isPassably(lua_State* Lua)
 
 int lua_inspect(lua_State* Lua)
 {
+
     int argc = lua_gettop(Lua);
     if(argc < 2 || (!lua_isnumber(Lua,1) || !lua_isnumber(Lua,2)))
         return 0;
@@ -122,9 +123,10 @@ int lua_inspect(lua_State* Lua)
     int     x           = lua_tonumber(Lua,1);
     int     y           = lua_tonumber(Lua,2);
 
-    absolute_pos_to_2(x,y);
+    align_pos(2,x,y);
+    relative_to_absolute(x,y);
 
-    SUnit*  unit        = lb_ScriptEngine->getUnitsManager()->get_unit_by_pos(x,y);
+    SUnit*  unit  = lb_ScriptEngine->getUnitsManager()->get_unit_by_pos(x,y);
 
     if(unit == NULL)
         return 0;
@@ -138,24 +140,36 @@ int lua_inspect(lua_State* Lua)
 
 int lua_action(lua_State* Lua)
 {
-    if(lb_ScriptEngine->getCurrentUnit()->Actions == 0)
-        return 1;
-
-
     int argc = lua_gettop(Lua);
-
-    if(argc < 3 || ( !lua_isstring(Lua,1) || !lua_isnumber(Lua,2) || !lua_isnumber(Lua,3)))
+    if(argc < 1 || !lua_isstring(Lua,1))
+    {
+        lua_pushboolean(Lua,0);
         return 1;
-
+    }
 
     SUnit* unit             = lb_ScriptEngine->getCurrentUnit();
     const char* action      = lua_tostring(Lua,1);
-    int         x           = lua_tonumber(Lua,2);
-    int         y           = lua_tonumber(Lua,3);
-
+    if(unit->Actions == 0)
+    {
+        lua_pushboolean(Lua,0);
+        return 1;
+    }
+    //--------------------------------------------------------------------------
     if(strcmp(action,"move") == 0)
     {
-        absolute_pos_to_1(x,y);
+        //!---------------------------------------------
+        if(!lua_isnumber(Lua,2) || !lua_isnumber(Lua,3))
+        {
+            lua_pushboolean(Lua,0);
+            return 1;
+        }
+
+        int x = lua_tonumber(Lua,2);
+        int y = lua_tonumber(Lua,3);
+
+        align_pos(1,x,y);
+        relative_to_absolute(x,y);
+        //!---------------------------------------------
         if(lb_ScriptEngine->isCollision(x,y))
         {
             lua_pushboolean(Lua,1);
@@ -172,29 +186,36 @@ int lua_action(lua_State* Lua)
             lua_pushboolean(Lua,0);
         }
     }
-
+    //---------------------------------------------------------------------------
     if(strcmp(action,"attack") == 0)
     {
-        absolute_pos_to_1(x,y);
+        //!---------------------------------------------
+        if(!lua_isnumber(Lua,2) || !lua_isnumber(Lua,3))
+        {
+            lua_pushboolean(Lua,0);
+            return 1;
+        }
+
+        int x = lua_tonumber(Lua,2);
+        int y = lua_tonumber(Lua,3);
+
+        align_pos(1,x,y);
+        relative_to_absolute(x,y);
+        //!---------------------------------------------
+
         SUnit* target = lb_ScriptEngine->getUnitsManager()->get_unit_by_pos(x,y);
         if(target != NULL && target->TeamID != unit->TeamID)
         {
             s32 Damage = unit->Attack - target->Arrmor;
-            s32 ArrmorPenetration = rand() % unit->Attack;
-
-            if(Damage <= 0)
-                Damage = 1;
-
-
             target->Health-=Damage;
-            target->Arrmor-=ArrmorPenetration;
+            target->Arrmor-=Damage/4;
 
-            std::cout << unit->UnitID << "(" << unit->TeamID << ") id hit "<< target->UnitID << "(" << target->TeamID << ")  id on " << Damage << " Damage trgt:hp = " << target->Health << "\\100 arrmor penetration = " << ArrmorPenetration << "(" << target->Arrmor << ")" << std::endl;
+            std::cout << unit->UnitID << "(" << unit->TeamID << ") id hit "<< target->UnitID << "(" << target->TeamID << ")  id on " << Damage << " Damage trgt:hp = " << target->Health << "\\100 (" << target->Arrmor << ")" << std::endl;
 
 
             //--------------------------------------------------------------------------------------------
             s32 ex,ey;
-            relative_to_global_pos(ex,ey,target);
+            get_global_pos(ex,ey,target);
             if(target->Health > 0)
             {
                 lb_ScriptEngine->getEffectManager()->create_effect(GE_ATTACK,novaengine::core::vector2ds(ex,ey));
@@ -220,31 +241,24 @@ int lua_action(lua_State* Lua)
         }
     }
 
+    if(strcmp(action,"rest")==0)
+    {
+        u32 Heal = (100 - unit->Health)/25;
+        unit->Health+=Heal;
+
+        if(Heal != 0)
+        {
+            std::cout << unit->UnitID << "(" << unit->TeamID << ")  id healed on " << Heal << " points hp now " << unit->Health << "\\100" << std::endl;
+            s32 x,y;
+            get_global_pos(x,y,unit);
+            lb_ScriptEngine->getEffectManager()->create_effect(GE_HEAL_SMALL,novaengine::core::vector2ds(x,y));
+        }
+        unit->Actions = 0;
+        lua_pushboolean(Lua,1);
+    }
     return 1;
 }
 
-int lua_rest(lua_State* Lua)
-{
-    if(lb_ScriptEngine->getCurrentUnit()->Actions == 0)
-        return 0;
-
-    SUnit* unit             = lb_ScriptEngine->getCurrentUnit();
-
-    u32 Heal = (100 - unit->Health)/25;
-    unit->Health+=Heal;
-
-
-
-    if(Heal != 0)
-    {
-        std::cout << unit->UnitID << "(" << unit->TeamID << ")  id healed on " << Heal << " points hp now " << unit->Health << "\\100" << std::endl;
-        s32 x,y;
-        relative_to_global_pos(x,y,unit);
-        lb_ScriptEngine->getEffectManager()->create_effect(GE_HEAL_SMALL,novaengine::core::vector2ds(x,y));
-    }
-    unit->Actions = 0;
-    return 0;
-}
 //!***************************************************************************
 //!***************************************************************************
 //!***************************************************************************
@@ -280,13 +294,14 @@ bool CGameScriptEngine::init()
     }
     luaL_openlibs(Lua);
 
+    //reguster hook
+    lua_sethook(Lua,lua_hook_call,LUA_MASKLINE,NULL);
     //register lua api
     lua_register(Lua,"getRandom",lua_getRandom);
     lua_register(Lua,"getFullStatus",lua_getFullStatus);
     lua_register(Lua,"inspect",lua_inspect);
     lua_register(Lua,"isPassably",lua_isPassably);
     lua_register(Lua,"action",lua_action);
-    lua_register(Lua,"rest",lua_rest);
 
     return true;
 }
@@ -311,23 +326,15 @@ bool CGameScriptEngine::execute_next()
         std::cout << "Unit lost..." << std::endl;
         return false;
     }
-    CurrentUnit->Actions += 1;
 
-    if(CurrentUnit->Actions > 1)
-        CurrentUnit->Actions = 1;
-
-    CurrentUnit->LifeTime--;
+    CurrentUnit->Actions = 1;
 
     if(CurrentUnit->Health > 0 && CurrentUnit->LifeTime > 0 && CurrentUnit->Actions > 0)
     {
+        LinesProcessed = 0;
         STeam* team = TeamManager->get_team_by_id(CurrentUnit->TeamID);
         if(team != NULL)
             error = luaL_dofile(Lua,team->TeamScript.c_str());
-        else
-        {
-            std::cout << "Team lost..." << std::endl;
-            return false;
-        }
     }
 
     if(error)

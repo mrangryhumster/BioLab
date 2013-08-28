@@ -1,5 +1,4 @@
 #include "CGame.h"
-
 #include "NovaEngine.h"
 using namespace novaengine;
 
@@ -43,12 +42,12 @@ bool CGame::init_scene()
 bool CGame::init_game()
 {
 
-    Session = new CGameSession(Engine,2500,false);
+    Session = new CGameSession(Engine,1000,false);
     UnitsCount = 10;
     if(Session->init() == false)
         return false;
 
-    for(int i = 1; i < argc;i+=2)
+    for(int i = 1; i < argc; i+=2)
     {
         if(strcmp(argv[i],"-np") == 0)
             Session->add_player(argv[i+1]);
@@ -60,11 +59,13 @@ bool CGame::init_game()
 bool CGame::run()
 {
     Session->start(UnitsCount);
+    u64 stime = Engine->getTime();
     f32 fps = 0;
     fps_list.push_back(0);
+
     while(Engine->run())
     {
-        //Update Session
+
         if(Session->update(Engine->getRenderer()->getMPF()) == false)
         {
             std::cout << "Script engine error..." << std::endl;
@@ -76,6 +77,7 @@ bool CGame::run()
 
         Engine->getSceneManager()->renderScene();
         Session->render_units();
+        //draw_fps();
 
         Engine->getRenderer()->end_frame();
 
@@ -84,7 +86,7 @@ bool CGame::run()
         {
             fps = Engine->getRenderer()->getFPS();
             char buf[64];
-            sprintf(buf,"BioLab fps:%.0f a:%f primitives:%u vertex:%u",fps,Engine->getRenderer()->getMPF(),Engine->getRenderer()->getPPD(),Engine->getRenderer()->getVPD());
+            sprintf(buf,"BioLab fps:%.0f mpf:%f primitives:%u vertex:%u",fps,Engine->getRenderer()->getMPF(),Engine->getRenderer()->getPPD(),Engine->getRenderer()->getVPD());
             Engine->getWindow()->setWindowCaption(buf);
 
             fps_list.push_back(Engine->getRenderer()->getMPF()*25);

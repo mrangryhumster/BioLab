@@ -109,7 +109,7 @@ bool CGameSession::update(f32 ms)
     if(ExecuteAll != true)
     {
     f32 cell_count = UnitsManager->getUnitsCount();
-    realSimSpeed = SimSpeed / cell_count;
+        realSimSpeed = SimSpeed/cell_count;
     }
     else
     {

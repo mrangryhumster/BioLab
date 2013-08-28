@@ -104,7 +104,7 @@ void CGameEffects::create_effect(u32 effect_image,core::vector2ds pos)
     newEffect.LifeTime = 3000;
     newEffect.fadeout_modif = 0.085f;
 
-    newEffect.pos_x_modif = 0;
+    newEffect.pos_x_modif = (rand()%2)?0.001f:-0.001f;;
     newEffect.pos_y_modif = 0.02f;
 
     newEffect.scale_x_modif = 0;
