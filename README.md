@@ -3,4 +3,4 @@ BioLab
 
 A little game with programmable units
 
-last build link http://_ass_.net
+last build http://null.net
